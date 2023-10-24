@@ -43,7 +43,6 @@ for filename in os.scandir(directory):
 
         while line_num < len(Lines) : 
             line = Lines[line_num].strip()
-            #print(">>> " + line)
 
             if line == "":
                 pass

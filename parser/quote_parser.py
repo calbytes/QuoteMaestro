@@ -1,6 +1,7 @@
 import os
 import json
 import re
+import parser.quote_entry
 from quote_entry import QuoteEntry
 
 directory = 'parser/Quotes'

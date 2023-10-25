@@ -1,5 +1,5 @@
 #Local resources
-./parser/Quotes/
+/parser/Quotes/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

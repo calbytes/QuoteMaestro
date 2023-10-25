@@ -1,0 +1,1 @@
+import quote_entry

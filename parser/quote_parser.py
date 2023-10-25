@@ -25,7 +25,7 @@ def get_quote(lines, closing_brackets):
     while cur < end:
         if lines[cur].strip() != "":
             quote += lines[cur]
-
+            
         cur += 1
 
     return quote

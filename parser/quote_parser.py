@@ -3,7 +3,7 @@ import json
 import re
 from quote_entry import QuoteEntry
 
-directory = 'Quotes'
+directory = 'parser/Quotes'
 
 def get_page_number(string):
     digits = re.findall(r'\d+', string)
@@ -60,7 +60,7 @@ for filename in os.scandir(directory):
 
             line_num += 1
 
-        print(str(len(quotes)) + " quotes found in " + filename.name)
+        print(str(len(quotes)) + ' quotes found in ' + filename.name)
 
 
 

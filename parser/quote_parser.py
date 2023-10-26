@@ -1,9 +1,9 @@
 import os
 import json
 import re
-from .quote_entry import QuoteEntry
+from quote_entry import QuoteEntry
 
-directory = 'parser/Quotes'
+directory = 'Quotes'
 
 def get_page_number(string):
     digits = re.findall(r'\d+', string)

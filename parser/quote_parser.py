@@ -25,7 +25,6 @@ def get_quote(lines, closing_brackets):
     while cur < end:
         if lines[cur].strip() != "":
             quote += lines[cur]
-            
         cur += 1
 
     return quote
@@ -54,7 +53,7 @@ for filename in os.scandir(directory):
             if closing_brackets[0] < closing_brackets[1]:
                 quote_text = get_quote(Lines, closing_brackets)
                 page_number = get_page_number(line)
-                quote_entry = QuoteEntry(quote_text, metadata[0], metadata[0], page_number)
+                quote_entry = QuoteEntry(quote_text, metadata[0], metadata[1], page_number)
                 quotes.append(quote_entry)
                 closing_brackets[0] = line_num
 

@@ -1,8 +1,6 @@
 import psycopg
 from config import DB_CONFIG
 
-
-
 db_config = DB_CONFIG
 
 with psycopg.connect(**db_config) as conn:

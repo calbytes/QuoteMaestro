@@ -35,6 +35,7 @@ for filename in os.scandir(directory):
         file = open(filename, 'r')
         Lines = file.readlines()
         metadata = get_meta_data(Lines[0])
+        longest_quote = 0
 
         quotes = []
         closing_brackets = [0, 0]
@@ -52,6 +53,9 @@ for filename in os.scandir(directory):
 
             if closing_brackets[0] < closing_brackets[1]:
                 quote_text = get_quote(Lines, closing_brackets)
+                if len(quote_text) > longest_quote:
+                    longest_quote = len(quote_text)
+
                 page_number = get_page_number(line)
                 quote_entry = QuoteEntry(quote_text, metadata[0], metadata[1], page_number)
                 quotes.append(quote_entry)
@@ -60,6 +64,7 @@ for filename in os.scandir(directory):
             line_num += 1
 
         print(str(len(quotes)) + ' quotes found in ' + filename.name)
+        print('longest quote len: ' + str(longest_quote))
 
 
 

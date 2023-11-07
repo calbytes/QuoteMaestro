@@ -1,10 +1,14 @@
 import psycopg
 from config import DB_CONFIG
+import 
 
 db_config = DB_CONFIG
 
-with psycopg.connect(**db_config) as conn:
+quotes = tokenizer.get_quote_entries()
+print(quotes)
+exit()
 
+with psycopg.connect(**db_config) as conn:
     with conn.cursor() as cur:
 
         cur.execute("SELECT * FROM quotes")

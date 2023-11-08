@@ -1,6 +1,6 @@
 class QuoteEntry:
     def __init__(self, quote, title, author, page):
-        self.name = quote
+        self.quote = quote
         self.title = title
-        self.age = author
+        self.author = author
         self.page = page

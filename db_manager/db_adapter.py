@@ -1,7 +1,7 @@
 import psycopg
 from config import DB_CONFIG
-import 
-
+from ..quotefactory import tokenizer
+ 
 db_config = DB_CONFIG
 
 quotes = tokenizer.get_quote_entries()

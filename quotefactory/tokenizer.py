@@ -3,7 +3,7 @@ import json
 import re
 from quote_entry import QuoteEntry
 
-DIR = 'quote_parser/Quotes'
+DIR = 'quotefactory/Quotes'
 
 def get_page_number(string):
     digits = re.findall(r'\d+', string)
@@ -59,7 +59,10 @@ def get_quote_entries():
 
                 line_num += 1
 
-            #print(str(len(quotes)) + ' quotes found in ' + filename.name)
-
     return quotes
 
+if __name__ == '__main__':
+    quotes = get_quote_entries()
+    print('quote files tokenized: ' + str(len(quotes)))
+    for entry in quotes:
+        print(entry.quote)

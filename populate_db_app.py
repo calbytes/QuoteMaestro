@@ -1,10 +1,10 @@
 import quotefactory.tokenizer as qt
-import db_manager.populate_db as db_pop
-import db_manager.db_queries as db_queries
+import populate_db.insert_quotes as db
+import populate_db.db_queries as db_queries
 
 def insert_quote_entries():
     quotes = qt.get_quote_entries()
-    db_pop.populate_db(quotes)
+    db.populate_db(quotes)
     print('insert_quote_entries() finished')
 
 def fetch_all():

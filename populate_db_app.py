@@ -1,6 +1,6 @@
-import quotefactory.tokenizer as qt
-import populate_db.insert_quotes as db
-import populate_db.db_queries as db_queries
+import quote_factory.tokenizer as qt
+import db_manager.insert_quotes as db
+import db_manager.db_queries as db_queries
 
 def insert_quote_entries():
     quotes = qt.get_quote_entries()

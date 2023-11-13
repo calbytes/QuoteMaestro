@@ -7,8 +7,10 @@ def populate_db(quotes):
     with psycopg.connect(**db_config) as conn:
         with conn.cursor() as cur:
             for entry in quotes:
-                psqlStatement = "INSERT INTO quotes (quote, title, author, page) VALUES (%s, %s, %s, %s);"
-                cur.execute(psqlStatement, (entry.quote, entry.title, entry.author, entry.page))
+                cur.execute('''
+                    INSERT INTO quotes (quote, title, author, page) 
+                            VALUES (%s, %s, %s, %s, %s);
+                ''', (entry.quote, entry.title, entry.author, entry.page))
 
             conn.commit()
 

@@ -3,6 +3,10 @@ import config
 
 url = config.UDPATE_QUOTE_URL_LOCAL
 
+quote = 'test-quote'
+title = 'test-title'
+author = 'test-author'
+
 data = {'quote': quote, 'title': title, 'author': author}
 
 # Define any headers needed for authentication (if required)

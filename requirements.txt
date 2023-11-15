@@ -1,3 +1,2 @@
 psycopg
 requests
-flask

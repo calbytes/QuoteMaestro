@@ -1,4 +1,4 @@
-import quote_updater.quote_selector as dbt
+import quote_updater.update_selected_quote as qu
 import db_manager.PSQL_QUERIES as db
 
 def tester():
@@ -6,7 +6,7 @@ def tester():
     db.fetch_all()
 
 def tester():
-    print(str(dbt.select_quote_entry()))
+    print(qu.select_quote_id)
 
 if __name__ == '__main__':
     tester()

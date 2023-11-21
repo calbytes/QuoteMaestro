@@ -4,6 +4,7 @@ from .config import DB_CONFIG
 db_config = DB_CONFIG
 
 def fetch_all():
+    print('calling fetch_all()')
     with psycopg.connect(**db_config) as conn:
         with conn.cursor() as cur:
             cur.execute(PSQL_SELECT_ALL)
@@ -11,6 +12,8 @@ def fetch_all():
 
             for record in rows:
                 print(record)
+            
+            return rows
 
 def count_entries():
         with psycopg.connect(**db_config) as conn:

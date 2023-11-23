@@ -5,7 +5,7 @@ def tester():
     print('calling db.fetch_all()')
     db.fetch_all()
 
-def tester():
+def tester2():
     print(qu.select_quote_id)
 
 if __name__ == '__main__':

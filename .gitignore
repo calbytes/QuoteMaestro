@@ -1,5 +1,5 @@
 #Local resources
-/parser/Quotes/
+/quote_factory/Quotes/*.txt
 config.py
 
 # Byte-compiled / optimized / DLL files

@@ -28,8 +28,8 @@ class DB_CLIENT:
             print(f"Unexpected {err=}, {type(err)=}")
             raise
 
-    def insert_quote(self, data):
-        self.execute(psql.INSERT_QUOTE, Fetch.EXC, data)
+    def update_quote(self, data):
+        self.execute(psql.UPDATE_QUOTE, Fetch.EXC, data)
 
     def get_all_quotes(self):
         rows = self.execute(psql.SELECT_ALL_QUOTES, Fetch.ALL)

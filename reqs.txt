@@ -1,3 +1,2 @@
 psycopg[binary]
-pyspellchecker
 textblob

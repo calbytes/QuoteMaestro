@@ -3,7 +3,9 @@ import json
 import re
 from .quote_entry import QuoteEntry
 
-DIR = 'quote_factory/Quotes'
+import sys
+
+DIR = 'C:/Users/CAL/Documents/quotes_data'
 
 def get_page_number(string):
     digits = re.findall(r'\d+', string)
@@ -11,8 +13,9 @@ def get_page_number(string):
         return int(digits[0])
     return 0
 
-def get_meta_data(str):
-    data = json.loads(str)
+def get_meta_data(meta_data):
+    print(meta_data)
+    data = json.loads(meta_data)
     title = data.get('title')
     author = data.get('author')
     return title, author
@@ -34,7 +37,7 @@ def get_quote_entries():
         if filename.is_file():
             file = open(filename, 'r')
             Lines = file.readlines()
-            title, author = get_meta_data(Lines[0])
+            title, author = get_meta_data(Lines[0].strip())
 
             closing_brackets = [0, 0]
             line_num = 1
@@ -63,5 +66,10 @@ def get_quote_entries():
 if __name__ == '__main__':
     quotes = get_quote_entries()
     print('quote files tokenized: ' + str(len(quotes)))
+
+    i=1
     for entry in quotes:
-        print(entry.quote)
+        pass
+        print(i)
+        i+=1
+        entry.print()

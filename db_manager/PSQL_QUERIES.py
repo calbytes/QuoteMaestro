@@ -10,9 +10,10 @@ class PSQL_QUERIES:
         SET quote = %s, selected = false
         WHERE id = %s; 
     '''
-    
-    PSQL_RESET_SELECTED = '''
-        UPDATE your_table
-        SET selected = TRUE
-        WHERE selected = FALSE;
+
+    INSERT_QUOTE = '''
+        INSERT INTO quotes
+        (id, quote, author, title, page, selected)
+        VALUES
+        (%s, %s, %s, %s, %s, %s)
     '''

@@ -3,8 +3,6 @@ import json
 import re
 from .quote_entry import QuoteEntry
 
-import sys
-
 DIR = 'C:/Users/CAL/Documents/quotes_data'
 
 def get_page_number(string):
@@ -14,7 +12,7 @@ def get_page_number(string):
     return 0
 
 def get_meta_data(meta_data):
-    print(meta_data)
+    #print(meta_data)
     data = json.loads(meta_data)
     title = data.get('title')
     author = data.get('author')

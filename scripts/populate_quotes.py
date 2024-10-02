@@ -11,7 +11,6 @@ def insert_quote_entries():
         print("id: " + str(id))
 
         data = (id, quote.quote, quote.author, quote.title, quote.page, 'false')
-        print(data)
         db.insert_quote(data)
     print('insert_quote_entries() finished')
     

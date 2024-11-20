@@ -13,7 +13,7 @@ class PSQL_QUERIES:
 
     INSERT_QUOTE = '''
         INSERT INTO quotes
-        (id, quote, author, title, page, selected)
+        (quote, author, title, page, selected)
         VALUES
-        (%s, %s, %s, %s, %s, %s)
+        (%s, %s, %s, %s, %s)
     '''
